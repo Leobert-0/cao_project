@@ -1,0 +1,2 @@
+`define DECODER_COUNT 4224
+`define PROGRAM_COUNT 37

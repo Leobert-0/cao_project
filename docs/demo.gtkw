@@ -1,0 +1,25 @@
+[*] GTKWave configuration; open from the project root
+[dumpfile] "results/demo.vcd"
+[savefile] "docs/demo.gtkw"
+[timestart] 0
+[size] 1400 850
+@28
+tb_top.clk
+tb_top.reset
+tb_top.enable
+@22
+tb_top.instruction[31:0]
+tb_top.op[2:0]
+@28
+tb_top.src
+tb_top.rw
+tb_top.mr
+tb_top.mw
+tb_top.invalid
+@22
+tb_top.a[7:0]
+tb_top.b[7:0]
+tb_top.result[7:0]
+tb_top.wb[7:0]
+@28
+tb_top.flags[3:0]

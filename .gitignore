@@ -1,0 +1,9 @@
+.tools/
+.build/
+__pycache__/
+*.jou
+*.str
+*.pb
+.Xil/
+results/vivado/*/.Xil/
+docs/qa/

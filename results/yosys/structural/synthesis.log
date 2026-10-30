@@ -1,0 +1,894 @@
+
+-- Executing script file `results/yosys/structural/synthesis.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/structural.v
+Parsing Verilog input from `rtl/structural.v' to AST representation.
+Generating RTLIL representation for module `\half_adder'.
+Generating RTLIL representation for module `\full_adder'.
+Generating RTLIL representation for module `\mux2_gate'.
+Generating RTLIL representation for module `\mux_word'.
+Generating RTLIL representation for module `\ripple_carry_adder'.
+Generating RTLIL representation for module `\addsub_structural'.
+Generating RTLIL representation for module `\shift_structural'.
+Generating RTLIL representation for module `\alu_structural'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/behavioral.v
+Parsing Verilog input from `rtl/behavioral.v' to AST representation.
+Generating RTLIL representation for module `\addsub_behavioral'.
+Generating RTLIL representation for module `\alu_behavioral'.
+Generating RTLIL representation for module `\alu'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/demo_datapath.v
+Parsing Verilog input from `rtl/demo_datapath.v' to AST representation.
+Generating RTLIL representation for module `\instruction_decoder'.
+Generating RTLIL representation for module `\demo_datapath'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \alu_structural
+Used module:     \mux_word
+Used module:         \mux2_gate
+Used module:     \shift_structural
+Used module:     \addsub_structural
+Used module:         \ripple_carry_adder
+Used module:             \full_adder
+Used module:                 \half_adder
+Parameter 1 (\WIDTH) = 8
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\ripple_carry_adder'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+
+4.3. Executing AST frontend in derive mode using pre-parsed AST for module `\mux_word'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+
+4.4. Executing AST frontend in derive mode using pre-parsed AST for module `\shift_structural'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+
+4.5. Executing AST frontend in derive mode using pre-parsed AST for module `\addsub_structural'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000'.
+
+4.6. Analyzing design hierarchy..
+Top module:  \alu_structural
+Used module:     $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000
+Used module:         \mux2_gate
+Used module:     $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:     $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:         \ripple_carry_adder
+Used module:             \full_adder
+Used module:                 \half_adder
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000'.
+
+4.7. Analyzing design hierarchy..
+Top module:  \alu_structural
+Used module:     $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000
+Used module:         \mux2_gate
+Used module:     $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:     $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:         $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000
+Used module:             \full_adder
+Used module:                 \half_adder
+
+4.8. Analyzing design hierarchy..
+Top module:  \alu_structural
+Used module:     $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000
+Used module:         \mux2_gate
+Used module:     $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:     $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:         $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000
+Used module:             \full_adder
+Used module:                 \half_adder
+Removing unused module `\demo_datapath'.
+Removing unused module `\instruction_decoder'.
+Removing unused module `\alu'.
+Removing unused module `\alu_behavioral'.
+Removing unused module `\addsub_behavioral'.
+Removing unused module `\shift_structural'.
+Removing unused module `\addsub_structural'.
+Removing unused module `\ripple_carry_adder'.
+Removing unused module `\mux_word'.
+Removed 9 unused modules.
+Mapping positional arguments of cell alu_structural.c0 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell alu_structural.b1 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell alu_structural.b0 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell alu_structural.a3 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell alu_structural.a2 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell alu_structural.a1 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell alu_structural.a0 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell alu_structural.shifter ($paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell alu_structural.arithmetic_unit ($paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[7].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[7].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[6].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[6].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[5].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[5].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[4].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[4].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[3].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[3].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[2].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[2].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[1].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[1].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[0].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[0].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[7].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[7].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[6].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[6].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[5].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[5].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[4].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[4].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[3].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[3].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[2].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[2].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[1].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[1].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[0].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[0].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[7].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[7].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[6].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[6].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[5].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[5].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[4].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[4].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[3].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[3].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[2].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[2].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[1].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[1].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[0].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[0].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[7].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[6].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[5].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[4].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[3].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[2].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[1].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[0].m (mux2_gate).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[7].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[6].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[5].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[4].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[3].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[2].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[1].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[0].fa (full_adder).
+Mapping positional arguments of cell $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000.rca ($paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell full_adder.h1 (half_adder).
+Mapping positional arguments of cell full_adder.h0 (half_adder).
+
+5. Executing PROC pass (convert processes to netlists).
+
+5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 50 assignments to connections.
+
+5.4. Executing PROC_INIT pass (extract init attributes).
+
+5.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1474'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1473'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1472'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1471'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1470'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1469'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1468'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1467'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1466'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1465'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1464'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1463'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1462'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1461'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1460'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1459'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1458'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1457'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1456'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1455'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1454'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1453'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1452'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1451'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1450'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1449'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1448'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1447'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1446'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1445'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1444'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1443'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1442'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1441'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1440'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1439'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1438'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1437'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1436'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1435'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1434'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1433'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1432'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1431'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1430'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1429'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1428'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1427'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:69$1426'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:68$1425'.
+
+5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1474'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1473'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1472'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1471'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1470'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1469'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1468'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1467'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1466'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1465'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1464'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1463'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1462'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1461'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1460'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1459'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1458'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1457'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1456'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1455'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1454'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1453'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1452'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1451'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1450'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1449'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1448'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1447'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1446'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1445'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1444'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1443'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1442'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1441'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1440'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1439'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1438'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1437'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1436'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1435'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1434'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1433'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1432'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1431'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1430'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1429'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1428'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1427'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:69$1426'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:68$1425'.
+
+5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1474'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1473'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1472'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1471'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1470'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1469'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1468'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1467'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1466'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1465'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1464'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1463'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1462'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1461'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1460'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1459'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1458'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1457'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1456'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1455'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1454'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1453'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1452'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1451'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1450'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1449'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1448'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1447'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1446'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1445'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1444'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1443'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1442'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1441'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1440'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1439'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1438'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1437'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1436'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1435'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1434'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1433'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1432'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1431'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1430'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1429'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1428'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1427'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:69$1426'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:68$1425'.
+Cleaned up 0 empty switches.
+
+5.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+Optimizing module $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module mux2_gate.
+Optimizing module full_adder.
+Optimizing module half_adder.
+
+6. Executing SYNTH pass.
+
+6.1. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1.1. Analyzing design hierarchy..
+Top module:  \alu_structural
+Used module:     $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000
+Used module:         \mux2_gate
+Used module:     $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:     $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:         $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000
+Used module:             \full_adder
+Used module:                 \half_adder
+
+6.1.2. Analyzing design hierarchy..
+Top module:  \alu_structural
+Used module:     $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000
+Used module:         \mux2_gate
+Used module:     $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:     $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:         $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000
+Used module:             \full_adder
+Used module:                 \half_adder
+Removed 0 unused modules.
+
+6.2. Executing PROC pass (convert processes to netlists).
+
+6.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+6.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+6.2.4. Executing PROC_INIT pass (extract init attributes).
+
+6.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+6.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+6.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+6.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+6.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+6.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+Optimizing module $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module mux2_gate.
+Optimizing module full_adder.
+Optimizing module half_adder.
+
+6.3. Executing CHECK pass (checking for obvious problems).
+Checking module alu_structural...
+Checking module $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000...
+Checking module mux2_gate...
+Checking module full_adder...
+Checking module half_adder...
+Found and reported 0 problems.
+
+6.4. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.
+Deleting now unused module $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.
+Deleting now unused module $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.
+Deleting now unused module $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000.
+Deleting now unused module mux2_gate.
+Deleting now unused module full_adder.
+Deleting now unused module half_adder.
+<suppressed ~76 debug messages>
+
+6.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+<suppressed ~42 debug messages>
+
+6.6. Executing CHECK pass (checking for obvious problems).
+Checking module alu_structural...
+Found and reported 0 problems.
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+Removed 10 unused cells and 753 unused wires.
+<suppressed ~11 debug messages>
+
+6.8. Executing OPT pass (performing simple optimizations).
+
+6.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 601 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Computing hashes of 492 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+<suppressed ~351 debug messages>
+Removed a total of 117 cells.
+
+6.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_structural..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_structural.
+Performed a total of 0 changes.
+
+6.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+6.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_structural..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_structural.
+Performed a total of 0 changes.
+
+6.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+6.9. Executing FSM pass (extract and optimize FSM).
+
+6.9.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+6.9.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+6.9.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+6.9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.9.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+6.9.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+6.9.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+6.9.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+6.10. Executing OPT pass (performing simple optimizations).
+
+6.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_structural..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_structural.
+Performed a total of 0 changes.
+
+6.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.10.9. Finished fast OPT passes. (There is nothing left to do.)
+
+6.11. Executing WREDUCE pass (reducing word size of cells).
+
+6.12. Executing PEEPOPT pass (run peephole optimizers).
+
+6.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.14. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module alu_structural:
+  created 0 $alu and 0 $macc cells.
+
+6.15. Executing SHARE pass (SAT-based resource sharing).
+
+6.16. Executing OPT pass (performing simple optimizations).
+
+6.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_structural..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_structural.
+Performed a total of 0 changes.
+
+6.16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.16.9. Finished fast OPT passes. (There is nothing left to do.)
+
+6.17. Executing MEMORY pass.
+
+6.17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+6.17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+6.17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+6.17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+6.17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+6.17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+6.17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+6.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.19. Executing OPT pass (performing simple optimizations).
+
+6.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+<suppressed ~4 debug messages>
+
+6.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.19.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.19.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.19.5. Finished fast OPT passes.
+
+6.20. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+6.21. Executing OPT pass (performing simple optimizations).
+
+6.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu_structural..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+6.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu_structural.
+Performed a total of 0 changes.
+
+6.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 484 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.21.6. Executing OPT_SHARE pass.
+
+6.21.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.21.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+
+6.21.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.21.10. Finished fast OPT passes. (There is nothing left to do.)
+
+6.22. Executing TECHMAP pass (map to technology primitives).
+
+6.22.1. Executing Verilog-2005 frontend: /share/techmap.v
+Parsing Verilog input from `/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+6.22.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $not.
+No more expansions possible.
+<suppressed ~423 debug messages>
+
+6.23. Executing OPT pass (performing simple optimizations).
+
+6.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu_structural.
+
+6.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu_structural'.
+Computing hashes of 490 cells of `\alu_structural'.
+Finding duplicate cells in `\alu_structural'.
+Removed a total of 0 cells.
+
+6.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu_structural..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+6.23.5. Finished fast OPT passes.
+
+6.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `alu_structural'. Setting top module to alu_structural.
+
+6.24.1. Analyzing design hierarchy..
+Top module:  \alu_structural
+
+6.24.2. Analyzing design hierarchy..
+Top module:  \alu_structural
+Removed 0 unused modules.
+
+6.25. Printing statistics.
+
+=== alu_structural ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      946 wires
+     1354 wire bits
+      941 public wires
+     1345 public wire bits
+        8 ports
+       31 port bits
+      490 cells
+      203   $_AND_
+        7   $_NOT_
+      108   $_OR_
+       34   $_XOR_
+      138   $scopeinfo
+
+6.26. Executing CHECK pass (checking for obvious problems).
+Checking module alu_structural...
+Found and reported 0 problems.
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module alu_structural...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\alu_structural": {
+         "num_wires":         946,
+         "num_wire_bits":     1354,
+         "num_pub_wires":     941,
+         "num_pub_wire_bits": 1345,
+         "num_ports":         8,
+         "num_port_bits":     31,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         352,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 203,
+            "$_NOT_": 7,
+            "$_OR_": 108,
+            "$_XOR_": 34
+         }
+      }
+   },
+      "design": {
+         "num_wires":         946,
+         "num_wire_bits":     1354,
+         "num_pub_wires":     941,
+         "num_pub_wire_bits": 1345,
+         "num_ports":         8,
+         "num_port_bits":     31,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         352,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 203,
+            "$_NOT_": 7,
+            "$_OR_": 108,
+            "$_XOR_": 34
+         }
+      }
+}
+
+Renaming module \alu_structural to \alu_netlist.
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `\alu_netlist'.

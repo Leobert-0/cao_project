@@ -1,0 +1,5 @@
+read_verilog -Irtl rtl/structural.v rtl/behavioral.v rtl/demo_datapath.v
+hierarchy -check -top demo_datapath
+proc
+select -assert-none t:$dlatch
+check -assert

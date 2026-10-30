@@ -1,0 +1,12 @@
+[
+  {
+    "style": "structural",
+    "generic_cells": 352,
+    "post_synthesis_passed": true
+  },
+  {
+    "style": "behavioral",
+    "generic_cells": 309,
+    "post_synthesis_passed": true
+  }
+]

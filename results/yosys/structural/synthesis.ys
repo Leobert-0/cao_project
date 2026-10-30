@@ -1,0 +1,11 @@
+read_verilog -Irtl rtl/structural.v rtl/behavioral.v rtl/demo_datapath.v
+hierarchy -check -top alu_structural
+proc
+select -assert-none t:$dlatch
+synth -top alu_structural -flatten -noabc
+delete t:$scopeinfo
+check -assert
+select -assert-none t:$_DLATCH_*
+tee -o results/yosys/structural/statistics.json stat -json
+rename alu_structural alu_netlist
+write_verilog -noattr results/yosys/structural/netlist.v

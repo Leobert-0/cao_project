@@ -1,0 +1,2 @@
+[PASS] tb_alu WIDTH=8 vectors=524288 simulated_ns=524288
+tb/tb_alu.v:82: $finish called at 524288000 (1ps)

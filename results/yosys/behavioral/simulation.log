@@ -1,0 +1,2 @@
+[PASS] tb_post vectors=24
+tb/tb_post.v:20: $finish called at 480000 (1ps)

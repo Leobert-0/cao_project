@@ -1,0 +1,40 @@
+VCD info: dumpfile results/demo.vcd opened for output.
+[PASS] demo step=0 instr=fff00093 a=00 b=ff result=ff CZNV=0010
+[PASS] demo step=1 instr=00100113 a=00 b=01 result=01 CZNV=0000
+[PASS] demo step=2 instr=002081b3 a=ff b=01 result=00 CZNV=1100
+[PASS] demo step=3 instr=07f00213 a=00 b=7f result=7f CZNV=0000
+[PASS] demo step=4 instr=002202b3 a=7f b=01 result=80 CZNV=0011
+[PASS] demo step=5 instr=00500313 a=00 b=05 result=05 CZNV=0000
+[PASS] demo step=6 instr=00a00393 a=00 b=0a result=0a CZNV=0000
+[PASS] demo step=7 instr=40730433 a=05 b=0a result=fb CZNV=0010
+[PASS] demo step=8 instr=0060f4b3 a=ff b=05 result=05 CZNV=0000
+[PASS] demo step=9 instr=00736533 a=05 b=0a result=0f CZNV=0000
+[PASS] demo step=10 instr=006345b3 a=05 b=05 result=00 CZNV=0100
+[PASS] demo step=11 instr=00611633 a=01 b=05 result=20 CZNV=0000
+[PASS] demo step=12 instr=0022d6b3 a=80 b=01 result=40 CZNV=0000
+[PASS] demo step=13 instr=0042a733 a=80 b=7f result=01 CZNV=0000
+[PASS] demo step=14 instr=0000f793 a=ff b=00 result=00 CZNV=0100
+[PASS] demo step=15 instr=05506813 a=00 b=55 result=55 CZNV=0000
+[PASS] demo step=16 instr=05584893 a=55 b=55 result=00 CZNV=0100
+[PASS] demo step=17 instr=00711913 a=01 b=07 result=80 CZNV=0010
+[PASS] demo step=18 instr=00795993 a=80 b=07 result=01 CZNV=0000
+[PASS] demo step=19 instr=00042a13 a=fb b=00 result=01 CZNV=0000
+[PASS] demo step=20 instr=008001a3 a=00 b=03 result=03 CZNV=0000
+[PASS] demo step=21 instr=00300a83 a=00 b=03 result=03 CZNV=0000
+[PASS] demo step=22 instr=fe600fa3 a=00 b=ff result=ff CZNV=0010
+[PASS] demo step=23 instr=fff00b03 a=00 b=ff result=ff CZNV=0010
+[PASS] demo step=24 instr=06300013 a=00 b=63 result=63 CZNV=0000
+[PASS] demo step=25 instr=10100b93 a=00 b=01 result=01 CZNV=0000
+[PASS] demo step=26 instr=40228c33 a=80 b=01 result=7f CZNV=1001
+[PASS] demo step=27 instr=ffffffff a=00 b=00 result=00 CZNV=0100
+[PASS] demo step=28 instr=022100b3 a=01 b=01 result=02 CZNV=0000
+[PASS] demo step=29 instr=00302083 a=00 b=03 result=03 CZNV=0000
+[PASS] demo step=30 instr=001021a3 a=00 b=03 result=03 CZNV=0000
+[PASS] demo step=31 instr=02a00093 a=00 b=2a result=2a CZNV=0000
+[PASS] demo step=32 instr=001001a3 a=00 b=03 result=03 CZNV=0000
+[PASS] demo step=33 instr=00300c83 a=00 b=03 result=03 CZNV=0000
+[PASS] demo step=34 instr=00191d13 a=80 b=01 result=00 CZNV=0100
+[PASS] demo step=35 instr=00115d93 a=01 b=01 result=00 CZNV=0100
+[PASS] demo step=36 instr=40738e33 a=0a b=0a result=00 CZNV=1100
+[PASS] tb_top instructions=37; final registers/memory, stall, x0, reset checked
+tb/tb_top.v:56: $finish called at 385000 (1ps)

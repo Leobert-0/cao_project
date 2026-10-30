@@ -1,0 +1,1395 @@
+
+-- Executing script file `results/yosys/demo_check.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/structural.v
+Parsing Verilog input from `rtl/structural.v' to AST representation.
+Generating RTLIL representation for module `\half_adder'.
+Generating RTLIL representation for module `\full_adder'.
+Generating RTLIL representation for module `\mux2_gate'.
+Generating RTLIL representation for module `\mux_word'.
+Generating RTLIL representation for module `\ripple_carry_adder'.
+Generating RTLIL representation for module `\addsub_structural'.
+Generating RTLIL representation for module `\shift_structural'.
+Generating RTLIL representation for module `\alu_structural'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/behavioral.v
+Parsing Verilog input from `rtl/behavioral.v' to AST representation.
+Generating RTLIL representation for module `\addsub_behavioral'.
+Generating RTLIL representation for module `\alu_behavioral'.
+Generating RTLIL representation for module `\alu'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/demo_datapath.v
+Parsing Verilog input from `rtl/demo_datapath.v' to AST representation.
+Generating RTLIL representation for module `\instruction_decoder'.
+Generating RTLIL representation for module `\demo_datapath'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \demo_datapath
+Used module:     \mux_word
+Used module:         \mux2_gate
+Used module:     \alu
+Used module:         \alu_structural
+Used module:             \shift_structural
+Used module:             \addsub_structural
+Used module:                 \ripple_carry_adder
+Used module:                     \full_adder
+Used module:                         \half_adder
+Used module:     \instruction_decoder
+Parameter 1 (\WIDTH) = 8
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\ripple_carry_adder'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+
+4.3. Executing AST frontend in derive mode using pre-parsed AST for module `\mux_word'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+
+4.4. Executing AST frontend in derive mode using pre-parsed AST for module `\shift_structural'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+
+4.5. Executing AST frontend in derive mode using pre-parsed AST for module `\addsub_structural'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+
+4.6. Executing AST frontend in derive mode using pre-parsed AST for module `\alu_structural'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Parameter 2 (\STRUCTURAL) = 1
+
+4.7. Executing AST frontend in derive mode using pre-parsed AST for module `\alu'.
+Parameter 1 (\WIDTH) = 8
+Parameter 2 (\STRUCTURAL) = 1
+Generating RTLIL representation for module `$paramod$637b4bdb2caabffa7e857ff5a1a0235f783dbbbd\alu'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+
+4.8. Analyzing design hierarchy..
+Top module:  \demo_datapath
+Used module:     $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000
+Used module:         \mux2_gate
+Used module:     $paramod$637b4bdb2caabffa7e857ff5a1a0235f783dbbbd\alu
+Used module:         \alu_structural
+Used module:             $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:             $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:                 \ripple_carry_adder
+Used module:                     \full_adder
+Used module:                         \half_adder
+Used module:     \instruction_decoder
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000'.
+
+4.9. Analyzing design hierarchy..
+Top module:  \demo_datapath
+Used module:     $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000
+Used module:         \mux2_gate
+Used module:     $paramod$637b4bdb2caabffa7e857ff5a1a0235f783dbbbd\alu
+Used module:         $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:             \mux_word
+Used module:             \shift_structural
+Used module:             \addsub_structural
+Used module:                 $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000
+Used module:                     \full_adder
+Used module:                         \half_adder
+Used module:     \instruction_decoder
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\mux_word\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000'.
+
+4.10. Analyzing design hierarchy..
+Top module:  \demo_datapath
+Used module:     $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000
+Used module:         \mux2_gate
+Used module:     $paramod$637b4bdb2caabffa7e857ff5a1a0235f783dbbbd\alu
+Used module:         $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:             $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:             $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:                 $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000
+Used module:                     \full_adder
+Used module:                         \half_adder
+Used module:     \instruction_decoder
+
+4.11. Analyzing design hierarchy..
+Top module:  \demo_datapath
+Used module:     $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000
+Used module:         \mux2_gate
+Used module:     $paramod$637b4bdb2caabffa7e857ff5a1a0235f783dbbbd\alu
+Used module:         $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:             $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:             $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000
+Used module:                 $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000
+Used module:                     \full_adder
+Used module:                         \half_adder
+Used module:     \instruction_decoder
+Removing unused module `\alu'.
+Removing unused module `\alu_behavioral'.
+Removing unused module `\addsub_behavioral'.
+Removing unused module `\alu_structural'.
+Removing unused module `\shift_structural'.
+Removing unused module `\addsub_structural'.
+Removing unused module `\ripple_carry_adder'.
+Removing unused module `\mux_word'.
+Removed 8 unused modules.
+Mapping positional arguments of cell $paramod$637b4bdb2caabffa7e857ff5a1a0235f783dbbbd\alu.gates.core ($paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.c0 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.b1 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.b0 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.a3 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.a2 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.a1 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.a0 ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.shifter ($paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.arithmetic_unit ($paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000.rca ($paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[7].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[7].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[6].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[6].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[5].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[5].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[4].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[4].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[3].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[3].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[2].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[2].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[1].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[1].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[0].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[2].bit_stage[0].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[7].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[7].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[6].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[6].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[5].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[5].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[4].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[4].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[3].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[3].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[2].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[2].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[1].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[1].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[0].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[1].bit_stage[0].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[7].right_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[7].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[6].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[6].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[5].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[5].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[4].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[4].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[3].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[3].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[2].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[2].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[1].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[1].left_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[0].right_data.m (mux2_gate).
+Mapping positional arguments of cell $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.level[0].bit_stage[0].left_zero.m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[7].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[6].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[5].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[4].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[3].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[2].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[1].m (mux2_gate).
+Mapping positional arguments of cell $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.bits_mux[0].m (mux2_gate).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[7].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[6].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[5].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[4].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[3].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[2].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[1].fa (full_adder).
+Mapping positional arguments of cell $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.stages[0].fa (full_adder).
+Mapping positional arguments of cell demo_datapath.writeback_mux ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell demo_datapath.arithmetic_unit ($paramod$637b4bdb2caabffa7e857ff5a1a0235f783dbbbd\alu).
+Mapping positional arguments of cell demo_datapath.operand_mux ($paramod\mux_word\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell demo_datapath.decoder (instruction_decoder).
+Mapping positional arguments of cell full_adder.h1 (half_adder).
+Mapping positional arguments of cell full_adder.h0 (half_adder).
+
+5. Executing PROC pass (convert processes to netlists).
+
+5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 4 switch rules as full_case in process $proc$rtl/demo_datapath.v:82$628 in module demo_datapath.
+Marked 8 switch rules as full_case in process $proc$rtl/demo_datapath.v:15$330 in module instruction_decoder.
+Removed a total of 0 dead cases.
+
+5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 352 assignments to connections.
+
+5.4. Executing PROC_INIT pass (extract init attributes).
+
+5.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~12 debug messages>
+
+5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1474'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1473'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1472'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1471'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1470'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1469'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1468'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1467'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1466'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1465'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1464'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1463'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1462'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1461'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1460'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1459'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1458'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1457'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1456'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1455'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1454'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1453'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1452'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1451'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1450'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1449'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1448'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1447'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1446'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1445'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1444'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1443'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1442'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1441'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1440'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1439'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1438'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1437'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1436'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1435'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1434'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1433'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1432'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1431'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1430'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1429'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1428'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1427'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:69$1426'.
+Creating decoders for process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:68$1425'.
+Creating decoders for process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+     1/307: $3$memwr$\memory$rtl/demo_datapath.v:88$624_EN[7:0]$1232
+     2/307: $3$memwr$\memory$rtl/demo_datapath.v:88$624_DATA[7:0]$1231
+     3/307: $3$memwr$\memory$rtl/demo_datapath.v:88$624_ADDR[7:0]$1230
+     4/307: $3$memwr$\registers$rtl/demo_datapath.v:87$623_EN[7:0]$1229
+     5/307: $3$memwr$\registers$rtl/demo_datapath.v:87$623_DATA[7:0]$1228
+     6/307: $3$memwr$\registers$rtl/demo_datapath.v:87$623_ADDR[4:0]$1227
+     7/307: $2$memwr$\memory$rtl/demo_datapath.v:88$624_EN[7:0]$1224
+     8/307: $2$memwr$\memory$rtl/demo_datapath.v:88$624_DATA[7:0]$1223
+     9/307: $2$memwr$\memory$rtl/demo_datapath.v:88$624_ADDR[7:0]$1222
+    10/307: $2$memwr$\registers$rtl/demo_datapath.v:87$623_EN[7:0]$1221
+    11/307: $2$memwr$\registers$rtl/demo_datapath.v:87$623_DATA[7:0]$1220
+    12/307: $2$memwr$\registers$rtl/demo_datapath.v:87$623_ADDR[4:0]$1219
+    13/307: $1\i[31:0]
+    14/307: $1$memwr$\memory$rtl/demo_datapath.v:85$622_EN[7:0]$1210
+    15/307: $1$memwr$\memory$rtl/demo_datapath.v:85$621_EN[7:0]$1209
+    16/307: $1$memwr$\memory$rtl/demo_datapath.v:85$620_EN[7:0]$1208
+    17/307: $1$memwr$\memory$rtl/demo_datapath.v:85$619_EN[7:0]$1207
+    18/307: $1$memwr$\memory$rtl/demo_datapath.v:85$618_EN[7:0]$1206
+    19/307: $1$memwr$\memory$rtl/demo_datapath.v:85$617_EN[7:0]$1205
+    20/307: $1$memwr$\memory$rtl/demo_datapath.v:85$616_EN[7:0]$1204
+    21/307: $1$memwr$\memory$rtl/demo_datapath.v:85$615_EN[7:0]$1203
+    22/307: $1$memwr$\memory$rtl/demo_datapath.v:85$614_EN[7:0]$1202
+    23/307: $1$memwr$\memory$rtl/demo_datapath.v:85$613_EN[7:0]$1201
+    24/307: $1$memwr$\memory$rtl/demo_datapath.v:85$612_EN[7:0]$1200
+    25/307: $1$memwr$\memory$rtl/demo_datapath.v:85$611_EN[7:0]$1199
+    26/307: $1$memwr$\memory$rtl/demo_datapath.v:85$610_EN[7:0]$1198
+    27/307: $1$memwr$\memory$rtl/demo_datapath.v:85$609_EN[7:0]$1197
+    28/307: $1$memwr$\memory$rtl/demo_datapath.v:85$608_EN[7:0]$1196
+    29/307: $1$memwr$\memory$rtl/demo_datapath.v:85$607_EN[7:0]$1195
+    30/307: $1$memwr$\memory$rtl/demo_datapath.v:85$606_EN[7:0]$1194
+    31/307: $1$memwr$\memory$rtl/demo_datapath.v:85$605_EN[7:0]$1193
+    32/307: $1$memwr$\memory$rtl/demo_datapath.v:85$604_EN[7:0]$1192
+    33/307: $1$memwr$\memory$rtl/demo_datapath.v:85$603_EN[7:0]$1191
+    34/307: $1$memwr$\memory$rtl/demo_datapath.v:85$602_EN[7:0]$1190
+    35/307: $1$memwr$\memory$rtl/demo_datapath.v:85$601_EN[7:0]$1189
+    36/307: $1$memwr$\memory$rtl/demo_datapath.v:85$600_EN[7:0]$1188
+    37/307: $1$memwr$\memory$rtl/demo_datapath.v:85$599_EN[7:0]$1187
+    38/307: $1$memwr$\memory$rtl/demo_datapath.v:85$598_EN[7:0]$1186
+    39/307: $1$memwr$\memory$rtl/demo_datapath.v:85$597_EN[7:0]$1185
+    40/307: $1$memwr$\memory$rtl/demo_datapath.v:85$596_EN[7:0]$1184
+    41/307: $1$memwr$\memory$rtl/demo_datapath.v:85$595_EN[7:0]$1183
+    42/307: $1$memwr$\memory$rtl/demo_datapath.v:85$594_EN[7:0]$1182
+    43/307: $1$memwr$\memory$rtl/demo_datapath.v:85$593_EN[7:0]$1181
+    44/307: $1$memwr$\memory$rtl/demo_datapath.v:85$592_EN[7:0]$1180
+    45/307: $1$memwr$\memory$rtl/demo_datapath.v:85$591_EN[7:0]$1179
+    46/307: $1$memwr$\memory$rtl/demo_datapath.v:85$590_EN[7:0]$1178
+    47/307: $1$memwr$\memory$rtl/demo_datapath.v:85$589_EN[7:0]$1177
+    48/307: $1$memwr$\memory$rtl/demo_datapath.v:85$588_EN[7:0]$1176
+    49/307: $1$memwr$\memory$rtl/demo_datapath.v:85$587_EN[7:0]$1175
+    50/307: $1$memwr$\memory$rtl/demo_datapath.v:85$586_EN[7:0]$1174
+    51/307: $1$memwr$\memory$rtl/demo_datapath.v:85$585_EN[7:0]$1173
+    52/307: $1$memwr$\memory$rtl/demo_datapath.v:85$584_EN[7:0]$1172
+    53/307: $1$memwr$\memory$rtl/demo_datapath.v:85$583_EN[7:0]$1171
+    54/307: $1$memwr$\memory$rtl/demo_datapath.v:85$582_EN[7:0]$1170
+    55/307: $1$memwr$\memory$rtl/demo_datapath.v:85$581_EN[7:0]$1169
+    56/307: $1$memwr$\memory$rtl/demo_datapath.v:85$580_EN[7:0]$1168
+    57/307: $1$memwr$\memory$rtl/demo_datapath.v:85$579_EN[7:0]$1167
+    58/307: $1$memwr$\memory$rtl/demo_datapath.v:85$578_EN[7:0]$1166
+    59/307: $1$memwr$\memory$rtl/demo_datapath.v:85$577_EN[7:0]$1165
+    60/307: $1$memwr$\memory$rtl/demo_datapath.v:85$576_EN[7:0]$1164
+    61/307: $1$memwr$\memory$rtl/demo_datapath.v:85$575_EN[7:0]$1163
+    62/307: $1$memwr$\memory$rtl/demo_datapath.v:85$574_EN[7:0]$1162
+    63/307: $1$memwr$\memory$rtl/demo_datapath.v:85$573_EN[7:0]$1161
+    64/307: $1$memwr$\memory$rtl/demo_datapath.v:85$572_EN[7:0]$1160
+    65/307: $1$memwr$\memory$rtl/demo_datapath.v:85$571_EN[7:0]$1159
+    66/307: $1$memwr$\memory$rtl/demo_datapath.v:85$570_EN[7:0]$1158
+    67/307: $1$memwr$\memory$rtl/demo_datapath.v:85$569_EN[7:0]$1157
+    68/307: $1$memwr$\memory$rtl/demo_datapath.v:85$568_EN[7:0]$1156
+    69/307: $1$memwr$\memory$rtl/demo_datapath.v:85$567_EN[7:0]$1155
+    70/307: $1$memwr$\memory$rtl/demo_datapath.v:85$566_EN[7:0]$1154
+    71/307: $1$memwr$\memory$rtl/demo_datapath.v:85$565_EN[7:0]$1153
+    72/307: $1$memwr$\memory$rtl/demo_datapath.v:85$564_EN[7:0]$1152
+    73/307: $1$memwr$\memory$rtl/demo_datapath.v:85$563_EN[7:0]$1151
+    74/307: $1$memwr$\memory$rtl/demo_datapath.v:85$562_EN[7:0]$1150
+    75/307: $1$memwr$\memory$rtl/demo_datapath.v:85$561_EN[7:0]$1149
+    76/307: $1$memwr$\memory$rtl/demo_datapath.v:85$560_EN[7:0]$1148
+    77/307: $1$memwr$\memory$rtl/demo_datapath.v:85$559_EN[7:0]$1147
+    78/307: $1$memwr$\memory$rtl/demo_datapath.v:85$558_EN[7:0]$1146
+    79/307: $1$memwr$\memory$rtl/demo_datapath.v:85$557_EN[7:0]$1145
+    80/307: $1$memwr$\memory$rtl/demo_datapath.v:85$556_EN[7:0]$1144
+    81/307: $1$memwr$\memory$rtl/demo_datapath.v:85$555_EN[7:0]$1143
+    82/307: $1$memwr$\memory$rtl/demo_datapath.v:85$554_EN[7:0]$1142
+    83/307: $1$memwr$\memory$rtl/demo_datapath.v:85$553_EN[7:0]$1141
+    84/307: $1$memwr$\memory$rtl/demo_datapath.v:85$552_EN[7:0]$1140
+    85/307: $1$memwr$\memory$rtl/demo_datapath.v:85$551_EN[7:0]$1139
+    86/307: $1$memwr$\memory$rtl/demo_datapath.v:85$550_EN[7:0]$1138
+    87/307: $1$memwr$\memory$rtl/demo_datapath.v:85$549_EN[7:0]$1137
+    88/307: $1$memwr$\memory$rtl/demo_datapath.v:85$548_EN[7:0]$1136
+    89/307: $1$memwr$\memory$rtl/demo_datapath.v:85$547_EN[7:0]$1135
+    90/307: $1$memwr$\memory$rtl/demo_datapath.v:85$546_EN[7:0]$1134
+    91/307: $1$memwr$\memory$rtl/demo_datapath.v:85$545_EN[7:0]$1133
+    92/307: $1$memwr$\memory$rtl/demo_datapath.v:85$544_EN[7:0]$1132
+    93/307: $1$memwr$\memory$rtl/demo_datapath.v:85$543_EN[7:0]$1131
+    94/307: $1$memwr$\memory$rtl/demo_datapath.v:85$542_EN[7:0]$1130
+    95/307: $1$memwr$\memory$rtl/demo_datapath.v:85$541_EN[7:0]$1129
+    96/307: $1$memwr$\memory$rtl/demo_datapath.v:85$540_EN[7:0]$1128
+    97/307: $1$memwr$\memory$rtl/demo_datapath.v:85$539_EN[7:0]$1127
+    98/307: $1$memwr$\memory$rtl/demo_datapath.v:85$538_EN[7:0]$1126
+    99/307: $1$memwr$\memory$rtl/demo_datapath.v:85$537_EN[7:0]$1125
+   100/307: $1$memwr$\memory$rtl/demo_datapath.v:85$536_EN[7:0]$1124
+   101/307: $1$memwr$\memory$rtl/demo_datapath.v:85$535_EN[7:0]$1123
+   102/307: $1$memwr$\memory$rtl/demo_datapath.v:85$534_EN[7:0]$1122
+   103/307: $1$memwr$\memory$rtl/demo_datapath.v:85$533_EN[7:0]$1121
+   104/307: $1$memwr$\memory$rtl/demo_datapath.v:85$532_EN[7:0]$1120
+   105/307: $1$memwr$\memory$rtl/demo_datapath.v:85$531_EN[7:0]$1119
+   106/307: $1$memwr$\memory$rtl/demo_datapath.v:85$530_EN[7:0]$1118
+   107/307: $1$memwr$\memory$rtl/demo_datapath.v:85$529_EN[7:0]$1117
+   108/307: $1$memwr$\memory$rtl/demo_datapath.v:85$528_EN[7:0]$1116
+   109/307: $1$memwr$\memory$rtl/demo_datapath.v:85$527_EN[7:0]$1115
+   110/307: $1$memwr$\memory$rtl/demo_datapath.v:85$526_EN[7:0]$1114
+   111/307: $1$memwr$\memory$rtl/demo_datapath.v:85$525_EN[7:0]$1113
+   112/307: $1$memwr$\memory$rtl/demo_datapath.v:85$524_EN[7:0]$1112
+   113/307: $1$memwr$\memory$rtl/demo_datapath.v:85$523_EN[7:0]$1111
+   114/307: $1$memwr$\memory$rtl/demo_datapath.v:85$522_EN[7:0]$1110
+   115/307: $1$memwr$\memory$rtl/demo_datapath.v:85$521_EN[7:0]$1109
+   116/307: $1$memwr$\memory$rtl/demo_datapath.v:85$520_EN[7:0]$1108
+   117/307: $1$memwr$\memory$rtl/demo_datapath.v:85$519_EN[7:0]$1107
+   118/307: $1$memwr$\memory$rtl/demo_datapath.v:85$518_EN[7:0]$1106
+   119/307: $1$memwr$\memory$rtl/demo_datapath.v:85$517_EN[7:0]$1105
+   120/307: $1$memwr$\memory$rtl/demo_datapath.v:85$516_EN[7:0]$1104
+   121/307: $1$memwr$\memory$rtl/demo_datapath.v:85$515_EN[7:0]$1103
+   122/307: $1$memwr$\memory$rtl/demo_datapath.v:85$514_EN[7:0]$1102
+   123/307: $1$memwr$\memory$rtl/demo_datapath.v:85$513_EN[7:0]$1101
+   124/307: $1$memwr$\memory$rtl/demo_datapath.v:85$512_EN[7:0]$1100
+   125/307: $1$memwr$\memory$rtl/demo_datapath.v:85$511_EN[7:0]$1099
+   126/307: $1$memwr$\memory$rtl/demo_datapath.v:85$510_EN[7:0]$1098
+   127/307: $1$memwr$\memory$rtl/demo_datapath.v:85$509_EN[7:0]$1097
+   128/307: $1$memwr$\memory$rtl/demo_datapath.v:85$508_EN[7:0]$1096
+   129/307: $1$memwr$\memory$rtl/demo_datapath.v:85$507_EN[7:0]$1095
+   130/307: $1$memwr$\memory$rtl/demo_datapath.v:85$506_EN[7:0]$1094
+   131/307: $1$memwr$\memory$rtl/demo_datapath.v:85$505_EN[7:0]$1093
+   132/307: $1$memwr$\memory$rtl/demo_datapath.v:85$504_EN[7:0]$1092
+   133/307: $1$memwr$\memory$rtl/demo_datapath.v:85$503_EN[7:0]$1091
+   134/307: $1$memwr$\memory$rtl/demo_datapath.v:85$502_EN[7:0]$1090
+   135/307: $1$memwr$\memory$rtl/demo_datapath.v:85$501_EN[7:0]$1089
+   136/307: $1$memwr$\memory$rtl/demo_datapath.v:85$500_EN[7:0]$1088
+   137/307: $1$memwr$\memory$rtl/demo_datapath.v:85$499_EN[7:0]$1087
+   138/307: $1$memwr$\memory$rtl/demo_datapath.v:85$498_EN[7:0]$1086
+   139/307: $1$memwr$\memory$rtl/demo_datapath.v:85$497_EN[7:0]$1085
+   140/307: $1$memwr$\memory$rtl/demo_datapath.v:85$496_EN[7:0]$1084
+   141/307: $1$memwr$\memory$rtl/demo_datapath.v:85$495_EN[7:0]$1083
+   142/307: $1$memwr$\memory$rtl/demo_datapath.v:85$494_EN[7:0]$1082
+   143/307: $1$memwr$\memory$rtl/demo_datapath.v:85$493_EN[7:0]$1081
+   144/307: $1$memwr$\memory$rtl/demo_datapath.v:85$492_EN[7:0]$1080
+   145/307: $1$memwr$\memory$rtl/demo_datapath.v:85$491_EN[7:0]$1079
+   146/307: $1$memwr$\memory$rtl/demo_datapath.v:85$490_EN[7:0]$1078
+   147/307: $1$memwr$\memory$rtl/demo_datapath.v:85$489_EN[7:0]$1077
+   148/307: $1$memwr$\memory$rtl/demo_datapath.v:85$488_EN[7:0]$1076
+   149/307: $1$memwr$\memory$rtl/demo_datapath.v:85$487_EN[7:0]$1075
+   150/307: $1$memwr$\memory$rtl/demo_datapath.v:85$486_EN[7:0]$1074
+   151/307: $1$memwr$\memory$rtl/demo_datapath.v:85$485_EN[7:0]$1073
+   152/307: $1$memwr$\memory$rtl/demo_datapath.v:85$484_EN[7:0]$1072
+   153/307: $1$memwr$\memory$rtl/demo_datapath.v:85$483_EN[7:0]$1071
+   154/307: $1$memwr$\memory$rtl/demo_datapath.v:85$482_EN[7:0]$1070
+   155/307: $1$memwr$\memory$rtl/demo_datapath.v:85$481_EN[7:0]$1069
+   156/307: $1$memwr$\memory$rtl/demo_datapath.v:85$480_EN[7:0]$1068
+   157/307: $1$memwr$\memory$rtl/demo_datapath.v:85$479_EN[7:0]$1067
+   158/307: $1$memwr$\memory$rtl/demo_datapath.v:85$478_EN[7:0]$1066
+   159/307: $1$memwr$\memory$rtl/demo_datapath.v:85$477_EN[7:0]$1065
+   160/307: $1$memwr$\memory$rtl/demo_datapath.v:85$476_EN[7:0]$1064
+   161/307: $1$memwr$\memory$rtl/demo_datapath.v:85$475_EN[7:0]$1063
+   162/307: $1$memwr$\memory$rtl/demo_datapath.v:85$474_EN[7:0]$1062
+   163/307: $1$memwr$\memory$rtl/demo_datapath.v:85$473_EN[7:0]$1061
+   164/307: $1$memwr$\memory$rtl/demo_datapath.v:85$472_EN[7:0]$1060
+   165/307: $1$memwr$\memory$rtl/demo_datapath.v:85$471_EN[7:0]$1059
+   166/307: $1$memwr$\memory$rtl/demo_datapath.v:85$470_EN[7:0]$1058
+   167/307: $1$memwr$\memory$rtl/demo_datapath.v:85$469_EN[7:0]$1057
+   168/307: $1$memwr$\memory$rtl/demo_datapath.v:85$468_EN[7:0]$1056
+   169/307: $1$memwr$\memory$rtl/demo_datapath.v:85$467_EN[7:0]$1055
+   170/307: $1$memwr$\memory$rtl/demo_datapath.v:85$466_EN[7:0]$1054
+   171/307: $1$memwr$\memory$rtl/demo_datapath.v:85$465_EN[7:0]$1053
+   172/307: $1$memwr$\memory$rtl/demo_datapath.v:85$464_EN[7:0]$1052
+   173/307: $1$memwr$\memory$rtl/demo_datapath.v:85$463_EN[7:0]$1051
+   174/307: $1$memwr$\memory$rtl/demo_datapath.v:85$462_EN[7:0]$1050
+   175/307: $1$memwr$\memory$rtl/demo_datapath.v:85$461_EN[7:0]$1049
+   176/307: $1$memwr$\memory$rtl/demo_datapath.v:85$460_EN[7:0]$1048
+   177/307: $1$memwr$\memory$rtl/demo_datapath.v:85$459_EN[7:0]$1047
+   178/307: $1$memwr$\memory$rtl/demo_datapath.v:85$458_EN[7:0]$1046
+   179/307: $1$memwr$\memory$rtl/demo_datapath.v:85$457_EN[7:0]$1045
+   180/307: $1$memwr$\memory$rtl/demo_datapath.v:85$456_EN[7:0]$1044
+   181/307: $1$memwr$\memory$rtl/demo_datapath.v:85$455_EN[7:0]$1043
+   182/307: $1$memwr$\memory$rtl/demo_datapath.v:85$454_EN[7:0]$1042
+   183/307: $1$memwr$\memory$rtl/demo_datapath.v:85$453_EN[7:0]$1041
+   184/307: $1$memwr$\memory$rtl/demo_datapath.v:85$452_EN[7:0]$1040
+   185/307: $1$memwr$\memory$rtl/demo_datapath.v:85$451_EN[7:0]$1039
+   186/307: $1$memwr$\memory$rtl/demo_datapath.v:85$450_EN[7:0]$1038
+   187/307: $1$memwr$\memory$rtl/demo_datapath.v:85$449_EN[7:0]$1037
+   188/307: $1$memwr$\memory$rtl/demo_datapath.v:85$448_EN[7:0]$1036
+   189/307: $1$memwr$\memory$rtl/demo_datapath.v:85$447_EN[7:0]$1035
+   190/307: $1$memwr$\memory$rtl/demo_datapath.v:85$446_EN[7:0]$1034
+   191/307: $1$memwr$\memory$rtl/demo_datapath.v:85$445_EN[7:0]$1033
+   192/307: $1$memwr$\memory$rtl/demo_datapath.v:85$444_EN[7:0]$1032
+   193/307: $1$memwr$\memory$rtl/demo_datapath.v:85$443_EN[7:0]$1031
+   194/307: $1$memwr$\memory$rtl/demo_datapath.v:85$442_EN[7:0]$1030
+   195/307: $1$memwr$\memory$rtl/demo_datapath.v:85$441_EN[7:0]$1029
+   196/307: $1$memwr$\memory$rtl/demo_datapath.v:85$440_EN[7:0]$1028
+   197/307: $1$memwr$\memory$rtl/demo_datapath.v:85$439_EN[7:0]$1027
+   198/307: $1$memwr$\memory$rtl/demo_datapath.v:85$438_EN[7:0]$1026
+   199/307: $1$memwr$\memory$rtl/demo_datapath.v:85$437_EN[7:0]$1025
+   200/307: $1$memwr$\memory$rtl/demo_datapath.v:85$436_EN[7:0]$1024
+   201/307: $1$memwr$\memory$rtl/demo_datapath.v:85$435_EN[7:0]$1023
+   202/307: $1$memwr$\memory$rtl/demo_datapath.v:85$434_EN[7:0]$1022
+   203/307: $1$memwr$\memory$rtl/demo_datapath.v:85$433_EN[7:0]$1021
+   204/307: $1$memwr$\memory$rtl/demo_datapath.v:85$432_EN[7:0]$1020
+   205/307: $1$memwr$\memory$rtl/demo_datapath.v:85$431_EN[7:0]$1019
+   206/307: $1$memwr$\memory$rtl/demo_datapath.v:85$430_EN[7:0]$1018
+   207/307: $1$memwr$\memory$rtl/demo_datapath.v:85$429_EN[7:0]$1017
+   208/307: $1$memwr$\memory$rtl/demo_datapath.v:85$428_EN[7:0]$1016
+   209/307: $1$memwr$\memory$rtl/demo_datapath.v:85$427_EN[7:0]$1015
+   210/307: $1$memwr$\memory$rtl/demo_datapath.v:85$426_EN[7:0]$1014
+   211/307: $1$memwr$\memory$rtl/demo_datapath.v:85$425_EN[7:0]$1013
+   212/307: $1$memwr$\memory$rtl/demo_datapath.v:85$424_EN[7:0]$1012
+   213/307: $1$memwr$\memory$rtl/demo_datapath.v:85$423_EN[7:0]$1011
+   214/307: $1$memwr$\memory$rtl/demo_datapath.v:85$422_EN[7:0]$1010
+   215/307: $1$memwr$\memory$rtl/demo_datapath.v:85$421_EN[7:0]$1009
+   216/307: $1$memwr$\memory$rtl/demo_datapath.v:85$420_EN[7:0]$1008
+   217/307: $1$memwr$\memory$rtl/demo_datapath.v:85$419_EN[7:0]$1007
+   218/307: $1$memwr$\memory$rtl/demo_datapath.v:85$418_EN[7:0]$1006
+   219/307: $1$memwr$\memory$rtl/demo_datapath.v:85$417_EN[7:0]$1005
+   220/307: $1$memwr$\memory$rtl/demo_datapath.v:85$416_EN[7:0]$1004
+   221/307: $1$memwr$\memory$rtl/demo_datapath.v:85$415_EN[7:0]$1003
+   222/307: $1$memwr$\memory$rtl/demo_datapath.v:85$414_EN[7:0]$1002
+   223/307: $1$memwr$\memory$rtl/demo_datapath.v:85$413_EN[7:0]$1001
+   224/307: $1$memwr$\memory$rtl/demo_datapath.v:85$412_EN[7:0]$1000
+   225/307: $1$memwr$\memory$rtl/demo_datapath.v:85$411_EN[7:0]$999
+   226/307: $1$memwr$\memory$rtl/demo_datapath.v:85$410_EN[7:0]$998
+   227/307: $1$memwr$\memory$rtl/demo_datapath.v:85$409_EN[7:0]$997
+   228/307: $1$memwr$\memory$rtl/demo_datapath.v:85$408_EN[7:0]$996
+   229/307: $1$memwr$\memory$rtl/demo_datapath.v:85$407_EN[7:0]$995
+   230/307: $1$memwr$\memory$rtl/demo_datapath.v:85$406_EN[7:0]$994
+   231/307: $1$memwr$\memory$rtl/demo_datapath.v:85$405_EN[7:0]$993
+   232/307: $1$memwr$\memory$rtl/demo_datapath.v:85$404_EN[7:0]$992
+   233/307: $1$memwr$\memory$rtl/demo_datapath.v:85$403_EN[7:0]$991
+   234/307: $1$memwr$\memory$rtl/demo_datapath.v:85$402_EN[7:0]$990
+   235/307: $1$memwr$\memory$rtl/demo_datapath.v:85$401_EN[7:0]$989
+   236/307: $1$memwr$\memory$rtl/demo_datapath.v:85$400_EN[7:0]$988
+   237/307: $1$memwr$\memory$rtl/demo_datapath.v:85$399_EN[7:0]$987
+   238/307: $1$memwr$\memory$rtl/demo_datapath.v:85$398_EN[7:0]$986
+   239/307: $1$memwr$\memory$rtl/demo_datapath.v:85$397_EN[7:0]$985
+   240/307: $1$memwr$\memory$rtl/demo_datapath.v:85$396_EN[7:0]$984
+   241/307: $1$memwr$\memory$rtl/demo_datapath.v:85$395_EN[7:0]$983
+   242/307: $1$memwr$\memory$rtl/demo_datapath.v:85$394_EN[7:0]$982
+   243/307: $1$memwr$\memory$rtl/demo_datapath.v:85$393_EN[7:0]$981
+   244/307: $1$memwr$\memory$rtl/demo_datapath.v:85$392_EN[7:0]$980
+   245/307: $1$memwr$\memory$rtl/demo_datapath.v:85$391_EN[7:0]$979
+   246/307: $1$memwr$\memory$rtl/demo_datapath.v:85$390_EN[7:0]$978
+   247/307: $1$memwr$\memory$rtl/demo_datapath.v:85$389_EN[7:0]$977
+   248/307: $1$memwr$\memory$rtl/demo_datapath.v:85$388_EN[7:0]$976
+   249/307: $1$memwr$\memory$rtl/demo_datapath.v:85$387_EN[7:0]$975
+   250/307: $1$memwr$\memory$rtl/demo_datapath.v:85$386_EN[7:0]$974
+   251/307: $1$memwr$\memory$rtl/demo_datapath.v:85$385_EN[7:0]$973
+   252/307: $1$memwr$\memory$rtl/demo_datapath.v:85$384_EN[7:0]$972
+   253/307: $1$memwr$\memory$rtl/demo_datapath.v:85$383_EN[7:0]$971
+   254/307: $1$memwr$\memory$rtl/demo_datapath.v:85$382_EN[7:0]$970
+   255/307: $1$memwr$\memory$rtl/demo_datapath.v:85$381_EN[7:0]$969
+   256/307: $1$memwr$\memory$rtl/demo_datapath.v:85$380_EN[7:0]$968
+   257/307: $1$memwr$\memory$rtl/demo_datapath.v:85$379_EN[7:0]$967
+   258/307: $1$memwr$\memory$rtl/demo_datapath.v:85$378_EN[7:0]$966
+   259/307: $1$memwr$\memory$rtl/demo_datapath.v:85$377_EN[7:0]$965
+   260/307: $1$memwr$\memory$rtl/demo_datapath.v:85$376_EN[7:0]$964
+   261/307: $1$memwr$\memory$rtl/demo_datapath.v:85$375_EN[7:0]$963
+   262/307: $1$memwr$\memory$rtl/demo_datapath.v:85$374_EN[7:0]$962
+   263/307: $1$memwr$\memory$rtl/demo_datapath.v:85$373_EN[7:0]$961
+   264/307: $1$memwr$\memory$rtl/demo_datapath.v:85$372_EN[7:0]$960
+   265/307: $1$memwr$\memory$rtl/demo_datapath.v:85$371_EN[7:0]$959
+   266/307: $1$memwr$\memory$rtl/demo_datapath.v:85$370_EN[7:0]$958
+   267/307: $1$memwr$\memory$rtl/demo_datapath.v:85$369_EN[7:0]$957
+   268/307: $1$memwr$\memory$rtl/demo_datapath.v:85$368_EN[7:0]$956
+   269/307: $1$memwr$\memory$rtl/demo_datapath.v:85$367_EN[7:0]$955
+   270/307: $1$memwr$\registers$rtl/demo_datapath.v:84$366_EN[7:0]$954
+   271/307: $1$memwr$\registers$rtl/demo_datapath.v:84$365_EN[7:0]$953
+   272/307: $1$memwr$\registers$rtl/demo_datapath.v:84$364_EN[7:0]$952
+   273/307: $1$memwr$\registers$rtl/demo_datapath.v:84$363_EN[7:0]$951
+   274/307: $1$memwr$\registers$rtl/demo_datapath.v:84$362_EN[7:0]$950
+   275/307: $1$memwr$\registers$rtl/demo_datapath.v:84$361_EN[7:0]$949
+   276/307: $1$memwr$\registers$rtl/demo_datapath.v:84$360_EN[7:0]$948
+   277/307: $1$memwr$\registers$rtl/demo_datapath.v:84$359_EN[7:0]$947
+   278/307: $1$memwr$\registers$rtl/demo_datapath.v:84$358_EN[7:0]$946
+   279/307: $1$memwr$\registers$rtl/demo_datapath.v:84$357_EN[7:0]$945
+   280/307: $1$memwr$\registers$rtl/demo_datapath.v:84$356_EN[7:0]$944
+   281/307: $1$memwr$\registers$rtl/demo_datapath.v:84$355_EN[7:0]$943
+   282/307: $1$memwr$\registers$rtl/demo_datapath.v:84$354_EN[7:0]$942
+   283/307: $1$memwr$\registers$rtl/demo_datapath.v:84$353_EN[7:0]$941
+   284/307: $1$memwr$\registers$rtl/demo_datapath.v:84$352_EN[7:0]$940
+   285/307: $1$memwr$\registers$rtl/demo_datapath.v:84$351_EN[7:0]$939
+   286/307: $1$memwr$\registers$rtl/demo_datapath.v:84$350_EN[7:0]$938
+   287/307: $1$memwr$\registers$rtl/demo_datapath.v:84$349_EN[7:0]$937
+   288/307: $1$memwr$\registers$rtl/demo_datapath.v:84$348_EN[7:0]$936
+   289/307: $1$memwr$\registers$rtl/demo_datapath.v:84$347_EN[7:0]$935
+   290/307: $1$memwr$\registers$rtl/demo_datapath.v:84$346_EN[7:0]$934
+   291/307: $1$memwr$\registers$rtl/demo_datapath.v:84$345_EN[7:0]$933
+   292/307: $1$memwr$\registers$rtl/demo_datapath.v:84$344_EN[7:0]$932
+   293/307: $1$memwr$\registers$rtl/demo_datapath.v:84$343_EN[7:0]$931
+   294/307: $1$memwr$\registers$rtl/demo_datapath.v:84$342_EN[7:0]$930
+   295/307: $1$memwr$\registers$rtl/demo_datapath.v:84$341_EN[7:0]$929
+   296/307: $1$memwr$\registers$rtl/demo_datapath.v:84$340_EN[7:0]$928
+   297/307: $1$memwr$\registers$rtl/demo_datapath.v:84$339_EN[7:0]$927
+   298/307: $1$memwr$\registers$rtl/demo_datapath.v:84$338_EN[7:0]$926
+   299/307: $1$memwr$\registers$rtl/demo_datapath.v:84$337_EN[7:0]$925
+   300/307: $1$memwr$\registers$rtl/demo_datapath.v:84$336_EN[7:0]$924
+   301/307: $1$memwr$\registers$rtl/demo_datapath.v:84$335_EN[7:0]$923
+   302/307: $1$memwr$\memory$rtl/demo_datapath.v:88$624_EN[7:0]$1216
+   303/307: $1$memwr$\memory$rtl/demo_datapath.v:88$624_DATA[7:0]$1215
+   304/307: $1$memwr$\memory$rtl/demo_datapath.v:88$624_ADDR[7:0]$1214
+   305/307: $1$memwr$\registers$rtl/demo_datapath.v:87$623_EN[7:0]$1213
+   306/307: $1$memwr$\registers$rtl/demo_datapath.v:87$623_DATA[7:0]$1212
+   307/307: $1$memwr$\registers$rtl/demo_datapath.v:87$623_ADDR[4:0]$1211
+Creating decoders for process `\instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+     1/18: $2\mem_write[0:0]
+     2/18: $2\mem_read[0:0]
+     3/18: $2\reg_write[0:0]
+     4/18: $7\invalid[0:0]
+     5/18: $6\invalid[0:0]
+     6/18: $5\invalid[0:0]
+     7/18: $4\invalid[0:0]
+     8/18: $3\alu_op[2:0]
+     9/18: $3\invalid[0:0]
+    10/18: $2\alu_op[2:0]
+    11/18: $2\invalid[0:0]
+    12/18: $1\invalid[0:0]
+    13/18: $1\alu_op[2:0]
+    14/18: $1\reg_write[0:0]
+    15/18: $1\mem_write[0:0]
+    16/18: $1\mem_read[0:0]
+    17/18: $1\alu_src[0:0]
+    18/18: $1\immediate[31:0]
+
+5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1474'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1473'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1472'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1471'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1470'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1469'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1468'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1467'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1466'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1465'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1464'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1463'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1462'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1461'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[3] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1460'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[3] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1459'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1458'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1457'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1456'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1455'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1454'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1453'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1452'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1451'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1450'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1449'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1448'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1447'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1446'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1445'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[2] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1444'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[2] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1443'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1442'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [7]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1441'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1440'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [6]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1439'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1438'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [5]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1437'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1436'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [4]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1435'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1434'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [3]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1433'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1432'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [2]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1431'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1430'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [1]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1429'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[1] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1428'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[1] [0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1427'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\rs[0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:69$1426'.
+No latch inferred for signal `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.\ls[0]' from process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:68$1425'.
+No latch inferred for signal `\instruction_decoder.\immediate' from process `\instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+No latch inferred for signal `\instruction_decoder.\alu_op' from process `\instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+No latch inferred for signal `\instruction_decoder.\alu_src' from process `\instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+No latch inferred for signal `\instruction_decoder.\reg_write' from process `\instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+No latch inferred for signal `\instruction_decoder.\mem_read' from process `\instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+No latch inferred for signal `\instruction_decoder.\mem_write' from process `\instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+No latch inferred for signal `\instruction_decoder.\invalid' from process `\instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+
+5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\demo_datapath.\i' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2645' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$335_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2646' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$336_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2647' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$337_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2648' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$338_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2649' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$339_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2650' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$340_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2651' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$341_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2652' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$342_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2653' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$343_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2654' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$344_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2655' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$345_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2656' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$346_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2657' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$347_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2658' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$348_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2659' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$349_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2660' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$350_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2661' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$351_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2662' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$352_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2663' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$353_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2664' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$354_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2665' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$355_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2666' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$356_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2667' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$357_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2668' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$358_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2669' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$359_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2670' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$360_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2671' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$361_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2672' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$362_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2673' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$363_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2674' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$364_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2675' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$365_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2676' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:84$366_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2677' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$367_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2678' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$368_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2679' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$369_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2680' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$370_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2681' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$371_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2682' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$372_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2683' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$373_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2684' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$374_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2685' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$375_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2686' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$376_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2687' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$377_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2688' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$378_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2689' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$379_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2690' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$380_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2691' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$381_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2692' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$382_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2693' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$383_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2694' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$384_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2695' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$385_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2696' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$386_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2697' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$387_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2698' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$388_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2699' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$389_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2700' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$390_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2701' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$391_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2702' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$392_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2703' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$393_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2704' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$394_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2705' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$395_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2706' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$396_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2707' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$397_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2708' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$398_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2709' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$399_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2710' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$400_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2711' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$401_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2712' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$402_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2713' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$403_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2714' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$404_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2715' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$405_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2716' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$406_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2717' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$407_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2718' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$408_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2719' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$409_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2720' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$410_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2721' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$411_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2722' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$412_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2723' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$413_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2724' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$414_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2725' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$415_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2726' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$416_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2727' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$417_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2728' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$418_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2729' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$419_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2730' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$420_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2731' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$421_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2732' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$422_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2733' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$423_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2734' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$424_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2735' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$425_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2736' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$426_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2737' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$427_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2738' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$428_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2739' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$429_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2740' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$430_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2741' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$431_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2742' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$432_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2743' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$433_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2744' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$434_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2745' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$435_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2746' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$436_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2747' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$437_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2748' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$438_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2749' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$439_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2750' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$440_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2751' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$441_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2752' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$442_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2753' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$443_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2754' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$444_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2755' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$445_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2756' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$446_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2757' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$447_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2758' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$448_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2759' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$449_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2760' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$450_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2761' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$451_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2762' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$452_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2763' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$453_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2764' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$454_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2765' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$455_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2766' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$456_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2767' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$457_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2768' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$458_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2769' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$459_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2770' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$460_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2771' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$461_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2772' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$462_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2773' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$463_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2774' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$464_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2775' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$465_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2776' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$466_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2777' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$467_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2778' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$468_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2779' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$469_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2780' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$470_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2781' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$471_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2782' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$472_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2783' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$473_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2784' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$474_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2785' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$475_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2786' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$476_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2787' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$477_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2788' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$478_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2789' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$479_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2790' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$480_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2791' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$481_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2792' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$482_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2793' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$483_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2794' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$484_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2795' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$485_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2796' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$486_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2797' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$487_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2798' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$488_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2799' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$489_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2800' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$490_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2801' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$491_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2802' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$492_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2803' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$493_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2804' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$494_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2805' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$495_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2806' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$496_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2807' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$497_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2808' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$498_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2809' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$499_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2810' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$500_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2811' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$501_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2812' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$502_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2813' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$503_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2814' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$504_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2815' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$505_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2816' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$506_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2817' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$507_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2818' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$508_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2819' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$509_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2820' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$510_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2821' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$511_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2822' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$512_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2823' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$513_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2824' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$514_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2825' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$515_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2826' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$516_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2827' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$517_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2828' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$518_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2829' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$519_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2830' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$520_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2831' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$521_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2832' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$522_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2833' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$523_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2834' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$524_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2835' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$525_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2836' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$526_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2837' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$527_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2838' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$528_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2839' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$529_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2840' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$530_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2841' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$531_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2842' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$532_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2843' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$533_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2844' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$534_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2845' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$535_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2846' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$536_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2847' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$537_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2848' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$538_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2849' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$539_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2850' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$540_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2851' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$541_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2852' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$542_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2853' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$543_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2854' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$544_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2855' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$545_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2856' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$546_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2857' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$547_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2858' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$548_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2859' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$549_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2860' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$550_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2861' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$551_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2862' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$552_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2863' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$553_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2864' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$554_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2865' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$555_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2866' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$556_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2867' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$557_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2868' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$558_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2869' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$559_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2870' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$560_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2871' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$561_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2872' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$562_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2873' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$563_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2874' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$564_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2875' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$565_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2876' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$566_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2877' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$567_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2878' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$568_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2879' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$569_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2880' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$570_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2881' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$571_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2882' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$572_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2883' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$573_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2884' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$574_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2885' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$575_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2886' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$576_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2887' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$577_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2888' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$578_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2889' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$579_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2890' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$580_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2891' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$581_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2892' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$582_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2893' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$583_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2894' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$584_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2895' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$585_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2896' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$586_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2897' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$587_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2898' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$588_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2899' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$589_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2900' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$590_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2901' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$591_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2902' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$592_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2903' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$593_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2904' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$594_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2905' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$595_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2906' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$596_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2907' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$597_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2908' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$598_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2909' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$599_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2910' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$600_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2911' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$601_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2912' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$602_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2913' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$603_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2914' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$604_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2915' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$605_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2916' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$606_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2917' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$607_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2918' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$608_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2919' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$609_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2920' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$610_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2921' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$611_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2922' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$612_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2923' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$613_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2924' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$614_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2925' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$615_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2926' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$616_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2927' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$617_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2928' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$618_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2929' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$619_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2930' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$620_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2931' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$621_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2932' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:85$622_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2933' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:87$623_ADDR' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2934' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:87$623_DATA' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2935' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\registers$rtl/demo_datapath.v:87$623_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2936' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:88$624_ADDR' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2937' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:88$624_DATA' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2938' with positive edge clock.
+Creating register for signal `\demo_datapath.$memwr$\memory$rtl/demo_datapath.v:88$624_EN' using process `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+  created $dff cell `$procdff$2939' with positive edge clock.
+
+5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1474'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1473'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1472'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1471'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1470'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1469'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1468'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1467'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1466'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1465'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1464'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1463'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1462'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1461'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1460'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1459'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1458'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1457'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1456'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1455'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1454'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1453'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1452'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1451'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1450'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1449'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1448'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1447'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1446'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1445'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1444'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1443'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:83$1442'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1441'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1440'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1439'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1438'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1437'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1436'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1435'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1434'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1433'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1432'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1431'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1430'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:76$1429'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:81$1428'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:78$1427'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:69$1426'.
+Removing empty process `$paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.$proc$rtl/structural.v:68$1425'.
+Found and cleaned up 4 empty switches in `\demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+Removing empty process `demo_datapath.$proc$rtl/demo_datapath.v:82$628'.
+Found and cleaned up 8 empty switches in `\instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+Removing empty process `instruction_decoder.$proc$rtl/demo_datapath.v:15$330'.
+Cleaned up 12 empty switches.
+
+5.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$637b4bdb2caabffa7e857ff5a1a0235f783dbbbd\alu.
+Optimizing module $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module demo_datapath.
+<suppressed ~1 debug messages>
+Optimizing module instruction_decoder.
+<suppressed ~6 debug messages>
+Optimizing module mux2_gate.
+Optimizing module full_adder.
+Optimizing module half_adder.
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$637b4bdb2caabffa7e857ff5a1a0235f783dbbbd\alu...
+Checking module $paramod\alu_structural\WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod\addsub_structural\WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod\shift_structural\WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod\mux_word\WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod\ripple_carry_adder\WIDTH=s32'00000000000000000000000000001000...
+Checking module demo_datapath...
+Checking module instruction_decoder...
+Checking module mux2_gate...
+Checking module full_adder...
+Checking module half_adder...
+Found and reported 0 problems.

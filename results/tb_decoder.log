@@ -1,0 +1,2 @@
+[PASS] tb_decoder vectors=4224
+tb/tb_decoder.v:22: $finish called at 4224000 (1ps)

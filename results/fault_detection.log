@@ -1,0 +1,4 @@
+ERROR: tb/tb_alu.v:45: ALU result or flags differ from independent reference
+       Time: 1000  Scope: tb_alu.check
+FATAL: tb/tb_alu.v:46: [FAIL] W=4 op=0 a=0 b=0 structural=04 behavioral=10 golden=04
+       Time: 1000  Scope: tb_alu.check

@@ -1,0 +1,161 @@
+{
+  "mode": "full",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "compiler": "C:\\Users\\Administrator\\AppData\\Local\\cao-hdl-tools\\iverilog\\bin\\iverilog.exe",
+  "tests": [
+    {
+      "name": "tb_units",
+      "passed": true,
+      "elapsed_seconds": 0.0407,
+      "simulation_seconds": 0.0121,
+      "compile_command": [
+        "C:\\Users\\Administrator\\AppData\\Local\\cao-hdl-tools\\iverilog\\bin\\iverilog.exe",
+        "-B",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\CAO-HD~1\\iverilog\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-Irtl",
+        "-Ivectors",
+        "-s",
+        "tb_units",
+        "-o",
+        "D:\\Programming projects\\cao project\\.build\\tb_units.vvp",
+        "rtl\\behavioral.v",
+        "rtl\\demo_datapath.v",
+        "rtl\\structural.v",
+        "tb/tb_units.v"
+      ]
+    },
+    {
+      "name": "tb_alu_4",
+      "passed": true,
+      "elapsed_seconds": 0.1398,
+      "simulation_seconds": 0.098,
+      "compile_command": [
+        "C:\\Users\\Administrator\\AppData\\Local\\cao-hdl-tools\\iverilog\\bin\\iverilog.exe",
+        "-B",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\CAO-HD~1\\iverilog\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-Irtl",
+        "-Ivectors",
+        "-s",
+        "tb_alu",
+        "-o",
+        "D:\\Programming projects\\cao project\\.build\\tb_alu_4.vvp",
+        "-Ptb_alu.WIDTH=4",
+        "rtl\\behavioral.v",
+        "rtl\\demo_datapath.v",
+        "rtl\\structural.v",
+        "tb/tb_alu.v"
+      ]
+    },
+    {
+      "name": "tb_alu_8",
+      "passed": true,
+      "elapsed_seconds": 48.9448,
+      "simulation_seconds": 48.8928,
+      "compile_command": [
+        "C:\\Users\\Administrator\\AppData\\Local\\cao-hdl-tools\\iverilog\\bin\\iverilog.exe",
+        "-B",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\CAO-HD~1\\iverilog\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-Irtl",
+        "-Ivectors",
+        "-s",
+        "tb_alu",
+        "-o",
+        "D:\\Programming projects\\cao project\\.build\\tb_alu_8.vvp",
+        "-Ptb_alu.WIDTH=8",
+        "rtl\\behavioral.v",
+        "rtl\\demo_datapath.v",
+        "rtl\\structural.v",
+        "tb/tb_alu.v"
+      ]
+    },
+    {
+      "name": "tb_alu_16",
+      "passed": true,
+      "elapsed_seconds": 15.3163,
+      "simulation_seconds": 15.2138,
+      "compile_command": [
+        "C:\\Users\\Administrator\\AppData\\Local\\cao-hdl-tools\\iverilog\\bin\\iverilog.exe",
+        "-B",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\CAO-HD~1\\iverilog\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-Irtl",
+        "-Ivectors",
+        "-s",
+        "tb_alu",
+        "-o",
+        "D:\\Programming projects\\cao project\\.build\\tb_alu_16.vvp",
+        "-Ptb_alu.WIDTH=16",
+        "rtl\\behavioral.v",
+        "rtl\\demo_datapath.v",
+        "rtl\\structural.v",
+        "tb/tb_alu.v"
+      ]
+    },
+    {
+      "name": "tb_decoder",
+      "passed": true,
+      "elapsed_seconds": 0.1083,
+      "simulation_seconds": 0.0509,
+      "compile_command": [
+        "C:\\Users\\Administrator\\AppData\\Local\\cao-hdl-tools\\iverilog\\bin\\iverilog.exe",
+        "-B",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\CAO-HD~1\\iverilog\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-Irtl",
+        "-Ivectors",
+        "-s",
+        "tb_decoder",
+        "-o",
+        "D:\\Programming projects\\cao project\\.build\\tb_decoder.vvp",
+        "rtl\\behavioral.v",
+        "rtl\\demo_datapath.v",
+        "rtl\\structural.v",
+        "tb/tb_decoder.v"
+      ]
+    },
+    {
+      "name": "tb_top",
+      "passed": true,
+      "elapsed_seconds": 0.1584,
+      "simulation_seconds": 0.065,
+      "compile_command": [
+        "C:\\Users\\Administrator\\AppData\\Local\\cao-hdl-tools\\iverilog\\bin\\iverilog.exe",
+        "-B",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\CAO-HD~1\\iverilog\\lib\\ivl",
+        "-g2012",
+        "-Wall",
+        "-Irtl",
+        "-Ivectors",
+        "-s",
+        "tb_top",
+        "-o",
+        "D:\\Programming projects\\cao project\\.build\\tb_top.vvp",
+        "rtl\\behavioral.v",
+        "rtl\\demo_datapath.v",
+        "rtl\\structural.v",
+        "tb/tb_top.v"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "rtl\\alu_defs.vh": "4bb4d9b29a1a6b71c908196c0f76eb4784e03b045a1163f8506c4a15471e41ea",
+    "rtl\\behavioral.v": "e8c69e2fef6797ad22e1a018ffa2642ab572f044a5c5fb1383a3c92b254cd013",
+    "rtl\\demo_datapath.v": "991763d48b1bfae6227dff3d9d57aac766dc4b02b560fdb16ee9af147da7e3bf",
+    "rtl\\structural.v": "2c5c3ef675e7441a9b3c76593dd838efd2f913398905879b281015e21e7ec05c",
+    "tb\\tb_alu.v": "d313e4edb7eedb044498c82c287fdacc8fcb7f270bcfa759d2c86fc929e341c2",
+    "tb\\tb_decoder.v": "6f2cc153ae16deea7683cafa296bd68dde5a51877c517d8967a97e6375847301",
+    "tb\\tb_post.v": "4f6133c7ea9966e6f0cb82bdb7c4022435c3497914784defdec0dac46b36d5fa",
+    "tb\\tb_top.v": "a9ddc4d0519d980337472e53d2648163623e5f3b041f4e2da0642dc9a01e70a2",
+    "tb\\tb_units.v": "64e7998ba0e65c9404bc87bd3438da235b4dc8f70b82f0f460384025c95c4a34"
+  },
+  "tool_version": "Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)",
+  "passed": true
+}

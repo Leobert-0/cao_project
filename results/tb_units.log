@@ -1,0 +1,2 @@
+[PASS] tb_units: 8 full-adder and 8 half-adder checks
+tb/tb_units.v:17: $finish called at 8000 (1ps)
